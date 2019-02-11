@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <%= render 'layouts/header_meta' %>
+<head>
 
-    <title>MoneyTracker</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <%= render 'layouts/header_meta' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= render 'layouts/custom_fonts' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <title>MoneyTracker</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= render 'layouts/custom_fonts' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div id="wrapper">
     <%= render 'layouts/sidenav' %>
-    <%= yield %>
-  </body>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <%= render 'layouts/topnav' %>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
