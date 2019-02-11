@@ -2,10 +2,10 @@
 <html>
 
 <head>
-
+  <%= favicon_link_tag %>
   <%= render 'layouts/header_meta' %>
 
-  <title>MoneyTracker</title>
+  <title>Piggy Savings</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -15,15 +15,19 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <%= render 'layouts/sidenav' %>
-    <div class="content-wrapper" class="d-flex flex-column">
-      <div id="content">
-        <%= render 'layouts/topnav' %>
-        <%= yield %>
+  <% if user_signed_in? %>
+    <div class="wrapper">
+      <%= render 'layouts/sidenav' %>
+      <div class="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <%= render 'layouts/topnav' %>
+          <%= yield %>
+        </div>
       </div>
     </div>
-  </div>
+  <% else %>
+    <%= yield %>
+  <% end %>
 </body>
 
 </html>
