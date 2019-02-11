@@ -1,64 +1,62 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <%= link_to root_path, class: "sidebar-brand d-flex align-items-center justify-content-center" do %>
+    <div class="sidebar-brand-text mx-3">Money Tracker</div>
+    <% end %>
 
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-        <!-- Sidebar - Brand -->
-        <%= link_to root_path, class: "sidebar-brand d-flex align-items-center justify-content-center" do %>
-        <div class="sidebar-brand-text mx-3">Money Tracker</div>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <%= link_to root_path, class: "nav-link" do %>
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
         <% end %>
+    </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <%= link_to root_path, class: "nav-link" do %>
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-            <% end %>
-        </li>
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Interface
+    </div>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComponents"
+            aria-expanded="true" aria-controls="collapseComponents">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Components</span>
+        </a>
 
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Interface
+        <div id="collapseComponents" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Components:</h6>
+                <%= link_to 'Buttons', root_path, class: 'collapse-item' %>
+                <%= link_to 'Cards', root_path, class: 'collapse-item' %>
+            </div>
         </div>
+    </li>
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComponents"
-                aria-expanded="true" aria-controls="collapseComponents">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>Components</span>
-            </a>
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+            aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Utilities</span>
+        </a>
 
-            <div id="collapseComponents" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Components:</h6>
-                    <%= link_to 'Buttons', root_path, class: 'collapse-item' %>
-                    <%= link_to 'Cards', root_path, class: 'collapse-item' %>
-                </div>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Utilities:</h6>
+                <%= link_to 'Colors', root_path, class: 'collapse-item' %>
+                <%= link_to 'Borders', root_path, class: 'collapse-item' %>
+                <%= link_to 'Animations', root_path, class: 'collapse-item' %>
+                <%= link_to 'Other', root_path, class: 'collapse-item' %>
             </div>
-        </li>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>Utilities</span>
-            </a>
-
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Utilities:</h6>
-                    <%= link_to 'Colors', root_path, class: 'collapse-item' %>
-                    <%= link_to 'Borders', root_path, class: 'collapse-item' %>
-                    <%= link_to 'Animations', root_path, class: 'collapse-item' %>
-                    <%= link_to 'Other', root_path, class: 'collapse-item' %>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <!-- End of Sidebar -->
+        </div>
+    </li>
+</ul>
+<!-- End of Sidebar -->
